@@ -1,0 +1,11 @@
+.Heading-SearchBar{
+  text-align: center;
+  width: 500px;
+  position: relative;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
