@@ -1,24 +1,11 @@
-import Pokemons from "./components/pokemonDiv/pokemon";
-import Search from "./components/search/Search";
 import './App.css'
-import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import PokemonHome from "./components/pokemonHome/Pokemonhome";
 
 export default function App() {
-  const [searchPokemon , setPokemon] = useState(null)
-
-
   return (
-    <div className="main-container">
-      <div className="Heading-SearchBar">
-        <h1>Pokemons</h1>
-        <Search calback={(name)=>setPokemon(name)}/>
-        {searchPokemon}
-        
-      </div>
-        {
-          searchPokemon === null ?
-          <Pokemons /> : <Pokemons PokemonName={searchPokemon}/>  
-        }
-    </div>
+    <BrowserRouter>
+      <PokemonHome />
+  </BrowserRouter>
   )
 }
