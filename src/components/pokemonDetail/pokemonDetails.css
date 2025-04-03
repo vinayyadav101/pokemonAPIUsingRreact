@@ -1,0 +1,29 @@
+.PokemonDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    position: relative;
+    padding-top: 2%;
+}
+
+.image img {
+    height: 50%;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 2%;
+}
+.types{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.details h1{
+    margin-top: 0;
+    letter-spacing: 15px;
+}
+.details p {
+    font-size: 20px;
+}

@@ -9,14 +9,19 @@ export default function PokemonHome() {
     return (
         <div className="main-container">
                 <div className="Heading-SearchBar">
-                    <h1>Pokemons</h1>
-
-                    <Search calback={(name)=>setPokemon(name)}/>
+                    <Search calback={(name)=>{
+                        if (name !== '') {
+                            
+                            setPokemon(`https://pokeapi.co/api/v2/pokemon/${name}`)
+                        }else{
+                            setPokemon(null)
+                        } 
+                    }}/>
         
                 </div>
             {
                 searchPokemon === null ?
-                    <Pokemons /> : <Pokemons PokemonName={searchPokemon}/>  
+                    <Pokemons /> : <Pokemons url={searchPokemon}/>  
             }
         </div>
     )
